@@ -1,0 +1,10 @@
+/* You can add global styles to this file, and also import other style files */
+/* Styles pour le menu de navigation */
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.active {
+  @apply bg-yellow-500 text-gray-800;
+}

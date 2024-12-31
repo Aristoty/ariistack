@@ -1,0 +1,39 @@
+<nav class="bg-gray-800 p-4 fixed w-full z-10">
+  <div class="flex justify-between items-center container mx-auto">
+    <div class="flex items-center">
+      <img src= "/assets/ariistack-logo.png" alt="Logo" class="rounded-full h-8 w-8 mr-2">
+      <span class="text-white text-lg font-semibold"><a href="#" class="text-white  py-2 rounded hover:bg-gray-700 transition duration-300">Ariistack</a></span>
+    </div>
+    <div class="hidden md:flex  space-x-4">
+      <a routerLink="/about" routerLinkActive="active" class="text-white px-4 py-2 rounded hover:bg-gray-700 transition duration-300">À propos</a>
+      <a routerLink="/projects" routerLinkActive="active" class="text-white px-4 py-2 rounded hover:bg-gray-700 transition duration-300">Projets</a>
+      <a routerLink="/skills" routerLinkActive="active" class="text-white px-4 py-2 rounded hover:bg-gray-700 transition duration-300">Compétences</a>
+      <a routerLink="/contact" routerLinkActive="active" class="text-white px-4 py-2 rounded hover:bg-gray-700 transition duration-300">Contact</a>
+    </div>
+    <div class="md:hidden">
+      <button class="text-white focus:outline-none" (click)="toggleMenu()">
+        <svg class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path>
+        </svg>
+      </button>
+    </div>
+  </div>
+    <div class="md:hidden" [ngClass]="{'block': menuOpen, 'hidden': !menuOpen}">
+    <a routerLink="/about" routerLinkActive="active" class="block text-white px-4 py-2 rounded hover:bg-gray-700 transition duration-300">À propos</a>
+    <a routerLink="/projects" routerLinkActive="active" class="block text-white px-4 py-2 rounded hover:bg-gray-700 transition duration-300">Projets</a>
+    <a routerLink="/skills" routerLinkActive="active" class="block text-white px-4 py-2 rounded hover:bg-gray-700 transition duration-300">Compétences</a>
+    <a routerLink="/contact" routerLinkActive="active" class="block text-white px-4 py-2 rounded hover:bg-gray-700 transition duration-300">Contact</a>
+  </div>
+</nav>
+
+<div class="content pt-20 p-4">
+  <router-outlet></router-outlet>
+</div>
+
+<footer class="bg-gray-800 p-4 text-center text-white">
+  <div class="flex justify-center items-center">
+    <img src="/assets/ariistack-logo.png" alt="Logo" class="rounded-full h-8 w-8 mr-2">
+    <span class="text-white text-lg font-semibold">Ariistack</span>
+  </div>
+  <p class="mt-2">&copy; 2024 Ariistack. Tous droits réservés.</p>
+</footer>
